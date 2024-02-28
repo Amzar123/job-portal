@@ -1,0 +1,23 @@
+# Fiber framework
+bin/
+vendor/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Compiled files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Dependency directories
+.idea/
+.vscode/
+node_modules/
+
+tmp/
+!uploads/.gitkeep
