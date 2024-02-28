@@ -1,0 +1,48 @@
+basePath: /
+host: localhost:4000
+info:
+  contact:
+    email: fiber@swagger.io
+    name: API Support
+  description: This is a sample swagger for Fiber
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Fiber Example API
+  version: "1.0"
+paths:
+  /jobs:
+    get:
+      operationId: job.Handler.GetJobs
+      parameters:
+      - description: Filter by <field> with <op> is operator
+        in: query
+        name: field_op
+        type: string
+      - description: Get related resources
+        in: query
+        name: with
+        type: string
+      - description: Sort by <field> in ascending order, add dash (-) in front of
+          <field> to sort in descending order
+        in: query
+        name: sort
+        type: string
+      - description: Skip the first <skip> records
+        in: query
+        name: skip
+        type: integer
+      - description: Limit result to <limit> records
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: Get a company
+      tags:
+      - company
+swagger: "2.0"
